@@ -32,7 +32,7 @@ The best guide can be found at the OpenRoad Flow Scripts tutorial [here](https:/
 
 ## Installing and setting up ORFS
 
-The best resource for setting up the toolchain can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html). A shorter version of the steps i followed is documented below.
+The best resource for setting up the toolchain can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html). A shorter version of the steps  is documented below.
 
 1) Install OpenRoad.
 
@@ -53,19 +53,19 @@ cmake ..
 make
 ```
 
-This should have openRoad installed. There are a few flags that can be set during the build and also while installing the dependencies. Details on those can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html#install-dependencies).
+This should have openRoad installed. There are  flags that can be set during the build and also while installing the dependencies. Details on those can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html#install-dependencies).
 
 2) Install Klayout.
 
-I tried Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
+ Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
 
 Fortunately there is a .deb package and takes care of the installation with one click and can be found [here](https://www.klayout.de/build.html)
 
-> Note: I went ahead with the Latest release (0.28.5)
+> Note: The Latest release (0.28.5) was installed
 
 3) Installing ORFS
 
-A very simple process and has a smll number of steps that can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html)
+A very simple process and has a small number of steps that can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html)
 
 Clone and Build 
 ```
@@ -82,6 +82,6 @@ openroad -help
 exit
 ```
 
-> Make sure that you remember the location of where you cloned the ORFS repository and every time you open a new terminal the `setup_env.sh` file is sourced.
+> Make sure that to remember the location of where the ORFS repository is cloned and every time a new terminal is launched, the `setup_env.sh` file is sourced.
 
 
