@@ -83,4 +83,45 @@ Fortunately there is a .deb package and takes care of the installation with one 
 > Note: The Latest release (0.28.5) was installed
 
 
+## The really simple way for RTL to GDSII!!!
 
+To understand the beauty of the OpenROAD Flow scripts, below are the really simple steps to generate the GDSII files for the `ibex` RISC V processor and the `ASAP7` PDK.
+
+> More about the ibex RISC V processor can be found [here](https://github.com/lowRISC/ibex)
+
+Change your current directory to the flow directory.
+```
+cd flow
+```
+
+You can run the flow in 2 ways
+
+1) Specify the design configuration file through the `DESIGN_CONFIG` variable each time
+```
+make DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk
+```
+
+2) If you plan on working with the same design multiple times edit the makefile by uncommenting the ` DESIGN_CONFIG=./designs/asap7/ibex/config.mk` (this is only for the ibex processor using asap7, other designs will have their other respective design files) line in the makefile and run make.
+
+```
+make
+```
+
+And thats it!!! with a single command OpenROAD takes care of converting the RTL to GDSII. It took about 15 minutes on my machine to have the final gds and the process completes with the message.
+ 
+ ```
+[INFO] Writing out GDS/OAS 'results/asap7/ibex/base/6_1_merged.gds'
+Elapsed time: 0:01.96[h:]min:sec. CPU time: user 1.82 sys 0.14 (100%). Peak memory: 475528KB.
+cp results/asap7/ibex/base/6_1_merged.gds results/asap7/ibex/base/6_final.gds
+
+ ```
+
+
+ OpenROAD offers an interactive to analyse the generated GDSII and the gui is launched using
+
+ ```
+ make gui_final
+ ```
+
+![GUI](resources/img1.png)
+## Understanding and viewing Logs
