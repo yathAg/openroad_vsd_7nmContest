@@ -131,4 +131,7 @@ cp results/asap7/ibex/base/6_1_merged.gds results/asap7/ibex/base/6_final.gds
 ![GUI](resources/img1.png)
 
 
+## Understanding the directory structure
+
+![directory](resources/img2.jpg)
 ## Understanding and viewing Logs
