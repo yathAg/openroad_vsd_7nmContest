@@ -22,7 +22,7 @@ The OpenRoad project supports two main flow controllers.
 2) **OpenLane** is a complete automated RTL-to-GDSII flow similiar to ORFS and is developed by Efabless for the skywater130 MPW Program 
 
 
-More about the OpenRoad Project can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html)
+> More about the OpenRoad Project can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html)
 
 ## Brief process of ORFS (or RTL to GDSII in general)
 
