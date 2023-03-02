@@ -58,7 +58,7 @@ cd OpenROAD-flow-scripts
 cd tools/OpenROAD
 sudo ./etc/DependencyInstaller.sh
 ```
-Build & Install
+Build & Install ( This takes of installing all the required scripts and the OpenRoad tool as well)
 ```
 cd ../..
 ./build_openroad.sh --local
