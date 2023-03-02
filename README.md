@@ -6,9 +6,9 @@ The best guide can be found at the OpenRoad Flow Scripts tutorial [here](https:/
 
 ##  OpenRoad & Flow controllers
 
-**OpenROAD** is an integrated chip physical design tool that takes a design from synthesized Verilog to routed layout. including placement and routing. It uses a hierarchical placement algorithm that aims to minimize wire length, and it provides several features to optimize timing and power consumption. OpenROAD is designed to be extensible and customizable, with a flexible architecture that allows users to add their own algorithms and features.
+**OpenROAD** is an integrated chip physical design tool that takes a design from from RTL to GDSII, including synthesis, floorplanning, placement, routing, signoff parasitic extraction and timing analysis. 
 
-from logic synthesis and floorplanning through detailed routing with metal fill insertion, signoff parasitic extraction and timing analysis.
+It uses a hierarchical placement algorithm that aims to minimize wire length, and it provides several features to optimize timing and power consumption. OpenROAD is designed to be extensible and customizable, with a flexible architecture that allows users to add their own algorithms and features.
 
 
 The OpenRoad project supports two main flow controllers.
