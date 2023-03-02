@@ -17,7 +17,7 @@ The OpenROAD project supports two main flow controllers.
 
    - In ORFS, OpenROAD is used as a plugin for the physical design stage, and it can be configured and customized to meet the specific needs of the design project. The OpenROAD plugin in ORFS provides access to several advanced features, such as hierarchical placement, global routing, and detailed routing optimization.
 
-   - ORFS  supports several public and private PDKs (under NDA) such as : GF180, Skywater130, ASAP7 etc.
+   - ORFS  supports several public and private PDKs (under NDA). Available public PDK's are GF180, Skywater130, ASAP7 etc.
 
 2) **OpenLane** is a complete automated RTL-to-GDSII flow similiar to ORFS and is developed by Efabless for the skywater130 MPW Program 
 
