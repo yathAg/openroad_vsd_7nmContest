@@ -12,7 +12,7 @@ The best guide can be found at the OpenRoad Flow Scripts tutorial [here](https:/
 
 **ORFS (ORFlow)** is a framework that provides a collection of open-source tools for digital ASIC design. It includes several tools for various parts of the design flow, including synthesis, placement, and routing. It aims to provide a flexible and customizable environment for digital ASIC design, allowing users to choose and combine different tools as needed. In ORFS, OpenROAD is used as a plugin for the physical design stage, and it can be configured and customized to meet the specific needs of the design project. The OpenROAD plugin in ORFS provides access to several advanced features, such as hierarchical placement, global routing, and detailed routing optimization.
 
-## Brief process of ORSF (or RTL to GDSII in general)
+## Brief process of ORFS (or RTL to GDSII in general)
 
 - Configuration: Once ORFS is installed, you can configure the framework to meet the specific needs of your design project. This involves specifying the design parameters, such as the target technology node, the design constraints, and the tool settings.
 
@@ -34,43 +34,21 @@ The best guide can be found at the OpenRoad Flow Scripts tutorial [here](https:/
 
 The best resource for setting up the toolchain can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html). A shorter version of the steps  is documented below.
 
-1) Install OpenRoad.
+1) Install OpenRoad Flow Scripts
 
 Clone repository
 ```
-git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git
-cd OpenROAD
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
 ```
 Install dependency using internal script ( It takes care of everything!!! )
 ```
-./etc/DependencyInstaller.sh
+cd OpenROAD-flow-scripts
+cd tools/OpenROAD
+sudo ./etc/DependencyInstaller.sh
 ```
 Build & Install
 ```
-mkdir build
-cd build
-cmake ..
-make
-```
-
-This should have openRoad installed. There are  flags that can be set during the build and also while installing the dependencies. Details on those can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html#install-dependencies).
-
-2) Install Klayout.
-
- Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
-
-Fortunately there is a .deb package and takes care of the installation with one click and can be found [here](https://www.klayout.de/build.html)
-
-> Note: The Latest release (0.28.5) was installed
-
-3) Installing ORFS
-
-A very simple process and has a small number of steps that can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html)
-
-Clone and Build 
-```
-git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
-cd OpenROAD-flow-scripts
+cd ../..
 ./build_openroad.sh --local
 ```
 
@@ -83,5 +61,14 @@ exit
 ```
 
 > Make sure that to remember the location of where the ORFS repository is cloned and every time a new terminal is launched, the `setup_env.sh` file is sourced.
+
+2) Install Klayout.
+
+ Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
+
+Fortunately there is a .deb package and takes care of the installation with one click and can be found [here](https://www.klayout.de/build.html)
+
+> Note: The Latest release (0.28.5) was installed
+
 
 
