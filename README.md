@@ -46,7 +46,18 @@ The OpenROAD project supports two main flow controllers.
 
 The best resource for setting up the toolchain can be found [here](https://openroad-flow-scripts.readthedocs.io/en/latest/user/BuildLocally.html). A shorter version of the steps  is documented below.
 
-1) Install OpenRoad Flow Scripts
+
+
+1) Install Klayout.
+
+ Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
+
+Fortunately there is a .deb package and takes care of the installation with one click and can be found [here](https://www.klayout.de/build.html)
+
+> Note: The Latest release (0.28.5) was installed 
+
+
+2) Install OpenRoad Flow Scripts
 
 Clone repository
 ```
