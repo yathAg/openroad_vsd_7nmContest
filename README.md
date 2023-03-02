@@ -97,8 +97,6 @@ Change your current directory to the flow directory.
 cd flow
 ```
 
-You can run the flow in 2 ways
-
 Uncomment the ` DESIGN_CONFIG=./designs/asap7/ibex/config.mk` line in the makefile
 
 ```
