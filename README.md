@@ -50,7 +50,7 @@ The best resource for setting up the toolchain can be found [here](https://openr
 
 1) Install Klayout.
 
- Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
+ Installing from source takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
 
 Fortunately there is a .deb package and takes care of the installation with one click and can be found [here](https://www.klayout.de/build.html)
 
@@ -63,13 +63,13 @@ Clone repository
 ```
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
 ```
-Install dependency using internal script ( It takes care of everything!!! )
+Install dependency using internal script ( It takes care of all the additional packages)
 ```
 cd OpenROAD-flow-scripts
 cd tools/OpenROAD
 sudo ./etc/DependencyInstaller.sh
 ```
-Build & Install ( This takes of installing all the required scripts and the OpenRoad tool as well)
+Build & Install ( This  installs all the required scripts and the OpenRoad tool as well)
 ```
 cd ../..
 ./build_openroad.sh --local
