@@ -85,14 +85,6 @@ exit
 
 > Make sure that to remember the location of where the ORFS repository is cloned and every time a new terminal is launched, the `setup_env.sh` file is sourced.
 
-2) Install Klayout.
-
- Installing from source but that takes a really ....really long time and the added fuss of getting the dependencies, making sure the path variable is correct and still after the process there were some issues.
-
-Fortunately there is a .deb package and takes care of the installation with one click and can be found [here](https://www.klayout.de/build.html)
-
-> Note: The Latest release (0.28.5) was installed
-
 
 ## The really simple way for RTL to GDSII!!!
 
@@ -107,12 +99,16 @@ cd flow
 
 You can run the flow in 2 ways
 
-1) Specify the design configuration file through the `DESIGN_CONFIG` variable each time
-```
-make DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk
-```
+Uncomment the ` DESIGN_CONFIG=./designs/asap7/ibex/config.mk` line in the makefile
 
-2) If you plan on working with the same design multiple times edit the makefile by uncommenting the ` DESIGN_CONFIG=./designs/asap7/ibex/config.mk` (this is only for the ibex processor using asap7, other designs will have their other respective design files) line in the makefile and run make.
+```
+# DESIGN_CONFIG=./designs/asap7/gcd/config.mk
+ DESIGN_CONFIG=./designs/asap7/ibex/config.mk
+# DESIGN_CONFIG=./designs/asap7/aes/config.mk
+```
+>Note: this is only for the ibex processor using asap7, other designs will have their other respective design files
+
+run make
 
 ```
 make
@@ -135,4 +131,6 @@ cp results/asap7/ibex/base/6_1_merged.gds results/asap7/ibex/base/6_final.gds
  ```
 
 ![GUI](resources/img1.png)
+
+
 ## Understanding and viewing Logs
