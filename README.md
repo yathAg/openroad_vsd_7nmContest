@@ -1,19 +1,19 @@
-# OpenRoad & VSD - 7nm PD Contest
+# OpenROAD & VSD - 7nm PD Contest
 
 This repository is designed to log my learnings and work during the contest.
 
-The best guide can be found at the OpenRoad Flow Scripts tutorial [here](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html#introduction)
+The best guide can be found at the OpenROAD Flow Scripts tutorial [here](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html#introduction)
 
-##  OpenRoad & Flow controllers
+##  OpenROAD & Flow controllers
 
 **OpenROAD** is an integrated chip physical design tool that takes a design from from RTL to GDSII, including synthesis, floorplanning, placement, routing, signoff parasitic extraction and timing analysis. 
 
 It uses a hierarchical placement algorithm that aims to minimize wire length, and it provides several features to optimize timing and power consumption. OpenROAD is designed to be extensible and customizable, with a flexible architecture that allows users to add their own algorithms and features.
 
 
-The OpenRoad project supports two main flow controllers.
+The OpenROAD project supports two main flow controllers.
 
-1) - **ORFS (ORFlow)** is a flow controller that provides a collection of open-source tools for automated digital ASIC design from synthesis to layout. It provides a fully automated RTL-to-GDSII design flow, which includes Synthesis, Placement and Routing (PnR), STA (Static Timing Analysis), DRC (Design Rule Check) and LVS (Layout Versus Schematic) checks. ORFS aims to provide a flexible and customizable environment for digital ASIC design, allowing users to choose and combine different tools as needed. 
+1) - **OpenROAD-flow-scripts(ORFS)** is a flow controller that provides a collection of open-source tools for automated digital ASIC design from synthesis to layout. It provides a fully automated RTL-to-GDSII design flow, which includes Synthesis, Placement and Routing (PnR), STA (Static Timing Analysis), DRC (Design Rule Check) and LVS (Layout Versus Schematic) checks. ORFS aims to provide a flexible and customizable environment for digital ASIC design, allowing users to choose and combine different tools as needed. 
 
    - In ORFS, OpenROAD is used as a plugin for the physical design stage, and it can be configured and customized to meet the specific needs of the design project. The OpenROAD plugin in ORFS provides access to several advanced features, such as hierarchical placement, global routing, and detailed routing optimization.
 
@@ -22,7 +22,7 @@ The OpenRoad project supports two main flow controllers.
 2) **OpenLane** is a complete automated RTL-to-GDSII flow similiar to ORFS and is developed by Efabless for the skywater130 MPW Program 
 
 
-> More about the OpenRoad Project can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html)
+> More about the OpenROAD Project can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html)
 
 ## Brief process of ORFS (or RTL to GDSII in general)
 
