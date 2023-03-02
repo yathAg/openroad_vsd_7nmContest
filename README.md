@@ -4,19 +4,31 @@ This repository is designed to log my learnings and work during the contest.
 
 The best guide can be found at the OpenRoad Flow Scripts tutorial [here](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html#introduction)
 
-## OpenLane Vs OpenRoad vs OpenRoad Flow Scripts
+##  OpenRoad & Flow controllers
 
-**OpenLane** is a complete RTL-to-GDSII flow that aims to automate the entire `digital design flow`, from synthesis to layout. It provides a fully automated RTL-to-GDSII design flow, which includes Synthesis, Placement and Routing (PnR), STA (Static Timing Analysis), DRC (Design Rule Check) and LVS (Layout Versus Schematic) checks. 
+**OpenROAD** is an integrated chip physical design tool that takes a design from synthesized Verilog to routed layout. including placement and routing. It uses a hierarchical placement algorithm that aims to minimize wire length, and it provides several features to optimize timing and power consumption. OpenROAD is designed to be extensible and customizable, with a flexible architecture that allows users to add their own algorithms and features.
 
-**OpenROAD** is also a digital design flow, but it has a more targeted focus on `physical design`, including placement and routing. It uses a hierarchical placement algorithm that aims to minimize wire length, and it provides several features to optimize timing and power consumption. OpenROAD is designed to be extensible and customizable, with a flexible architecture that allows users to add their own algorithms and features.
+from logic synthesis and floorplanning through detailed routing with metal fill insertion, signoff parasitic extraction and timing analysis.
 
-**ORFS (ORFlow)** is a framework that provides a collection of open-source tools for digital ASIC design. It includes several tools for various parts of the design flow, including synthesis, placement, and routing. It aims to provide a flexible and customizable environment for digital ASIC design, allowing users to choose and combine different tools as needed. In ORFS, OpenROAD is used as a plugin for the physical design stage, and it can be configured and customized to meet the specific needs of the design project. The OpenROAD plugin in ORFS provides access to several advanced features, such as hierarchical placement, global routing, and detailed routing optimization.
+
+The OpenRoad project supports two main flow controllers.
+
+1) - **ORFS (ORFlow)** is a flow controller that provides a collection of open-source tools for automated digital ASIC design from synthesis to layout. It provides a fully automated RTL-to-GDSII design flow, which includes Synthesis, Placement and Routing (PnR), STA (Static Timing Analysis), DRC (Design Rule Check) and LVS (Layout Versus Schematic) checks. ORFS aims to provide a flexible and customizable environment for digital ASIC design, allowing users to choose and combine different tools as needed. 
+
+   - In ORFS, OpenROAD is used as a plugin for the physical design stage, and it can be configured and customized to meet the specific needs of the design project. The OpenROAD plugin in ORFS provides access to several advanced features, such as hierarchical placement, global routing, and detailed routing optimization.
+
+   - ORFS  supports several public and private PDKs (under NDA) such as : GF180, Skywater130, ASAP7 etc.
+
+2) **OpenLane** is a complete automated RTL-to-GDSII flow similiar to ORFS and is developed by Efabless for the skywater130 MPW Program 
+
+
+More about the OpenRoad Project can be found [here](https://openroad.readthedocs.io/en/latest/main/README.html)
 
 ## Brief process of ORFS (or RTL to GDSII in general)
 
 - Configuration: Once ORFS is installed, you can configure the framework to meet the specific needs of your design project. This involves specifying the design parameters, such as the target technology node, the design constraints, and the tool settings.
 
-- Design entry: You can enter the design into ORFS in different ways, depending on your design entry method. ORFS supports different input formats, including Verilog, VHDL, and SystemVerilog.
+- Design entry: You can enter the design into ORFS in different ways, depending on your design entry method. ORFS supports different input formats such as Verilog
 
 - Synthesis: The synthesis stage involves transforming the RTL design into a gate-level netlist. ORFS includes several open-source synthesis tools, such as Yosys and ABC, which can be used for this stage.
 
