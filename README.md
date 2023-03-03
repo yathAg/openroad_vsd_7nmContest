@@ -132,4 +132,82 @@ cp results/asap7/ibex/base/6_1_merged.gds results/asap7/ibex/base/6_final.gds
 ## Understanding the directory structure
 
 ![directory](resources/img2.jpg)
-## Understanding and viewing Logs
+
+
+## Understanding and viewing Reports
+
+The three major metrics to understand the performance and functionality of the design are
+- Timing
+- Power
+- Design Area
+
+### Reporting and understanding the timing results
+
+Use the following commands in the Tcl Commands section of GUI:
+
+```
+report_worst_slack
+report_tns
+report_wns
+```
+
+An example of the reported Timing results is
+```
+worst slack -107.32
+tns -870.89
+wns -107.32
+```
+> Note the timing constraints in this situation are not met.
+
+
+- Negative Slack (NS): Negative slack is the amount of time by which a signal arrives later than it is required to arrive at a particular point in the circuit. It is calculated as the difference between the required arrival time and the actual arrival time of a signal. A negative slack value indicates that the circuit is not meeting its timing requirements and may result in timing violations.
+
+- Worst Negative Slack (WNS): Worst negative slack (WNS) is the most negative value of the slack across all paths in the circuit. It represents the worst-case timing violation in the circuit.
+
+- Total Negative Slack (TNS): Total negative slack (TNS) is the sum of all the negative slack values across all paths in the circuit. It represents the overall timing violation in the circuit.
+
+
+### Reporting and understanding power usage 
+
+The power is reported by 
+```
+report_power
+```
+
+An example of the reported power is 
+
+```
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.36e-03   2.68e-04   2.39e-07   1.63e-03  13.4%
+Combinational          4.35e-03   6.11e-03   1.99e-06   1.05e-02  86.6%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  5.70e-03   6.38e-03   2.23e-06   1.21e-02 100.0%
+                          47.2%      52.8%       0.0%
+
+```
+
+- Sequential Power Usage: Sequential power usage refers to the power consumed by the flip-flops and latches in a circuit. These elements store the state of the circuit, so they consume power even when the circuit is not actively switching. 
+
+- Combinational Power Usage: Combinational power usage refers to the power consumed by the logic gates and interconnects in a circuit. These elements do not store any state, so they only consume power when the circuit is actively switching. 
+
+- Macro Power Usage: Macro power usage refers to the power consumed by large IP blocks or subcircuits in the design. These blocks are typically provided by third-party vendors and can have a significant impact on the overall power consumption of the chip.
+
+- Pad Power Usage: Pad power usage refers to the power consumed by the input/output (I/O) pads of the chip. These pads interface the chip with the outside world and are typically designed to meet specific electrical standards. 
+
+### Reporting Area Utilization
+
+View design area and its core utilization:
+
+```
+report_design_area
+```
+
+An example of the reported area is 
+
+```
+Design area 2489 u^2 45% utilization.
+```
