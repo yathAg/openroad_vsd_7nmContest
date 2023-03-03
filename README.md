@@ -66,12 +66,10 @@ git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scri
 Install dependency using internal script ( It takes care of all the additional packages)
 ```
 cd OpenROAD-flow-scripts
-cd tools/OpenROAD
 sudo ./etc/DependencyInstaller.sh
 ```
 Build & Install ( This  installs all the required scripts and the OpenRoad tool as well)
 ```
-cd ../..
 ./build_openroad.sh --local
 ```
 
