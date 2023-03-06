@@ -84,6 +84,19 @@ exit
 > Make sure that to remember the location of where the ORFS repository is cloned and every time a new terminal is launched, the `setup_env.sh` file is sourced.
 
 
+
+## Updating ORFS
+
+ORFS is constantly evolving and it is a good idea to update the files from time to time. To update the ORFS files execute the commands below 
+
+```
+cd OpenROAD-flow-scripts
+git checkout master
+git pull
+git submodule update
+```
+
+
 ## The really simple way for RTL to GDSII!!!
 
 To understand the beauty of the OpenROAD Flow scripts, below are the really simple steps to generate the GDSII files for the `ibex` RISC V processor and the `ASAP7` PDK.
@@ -137,9 +150,9 @@ cp results/asap7/ibex/base/6_1_merged.gds results/asap7/ibex/base/6_final.gds
 ## Understanding and viewing Reports
 
 The three major metrics to understand the performance and functionality of the design are
-- Timing
-- Power
-- Design Area
+- Timing ( Target -> worst negative slack = O)
+- Power  ( Lower the better)
+- Design Area ( Lower the better )
 
 ### Reporting and understanding the timing results
 
@@ -211,3 +224,5 @@ An example of the reported area is
 ```
 Design area 2489 u^2 45% utilization.
 ```
+
+## Optimizing the design for 0 wns and drc free
