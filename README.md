@@ -225,13 +225,15 @@ The DRC file structure is as follows
 On running the drc for `asap7/gds` ,`6_drc_count.rpt` gives the count of 348 violations and their respective descriptions are in `6_drc.lyrdb`
 
 
+These violations can be seen in detail by running the  `.lydrc` script in Klayout by
+- Launch klayout
+- open the `6_1_merged.gds` file produced from 
+`make DESIGN_CONFIG=./designs/asap7/gcd/config.mk`
+- under the ` tools -> DRC -> new DRC` script import the `asap7.lydrc` file and run the drc check.
 
-One such example for the DRC error reported is listed below ( I might be wrong in understanding the error)
+This results in a GUI tool listing out all the drc violations with their count, description and location.
 
-![test](resources/test1.png)
-![test](resources/test2.png)
-![test](resources/test3.png)
+![directory](resources/test4.png)
 
-the rule `V4.M5.AUX.2` requires "V4 must exactly be the same width as M5 along the direction perpendicular to theM5 length"
-
-and as seen in the `gui` and reported `lyrdb` file it matches the `pdk drc` document
+one example of the violations reported is `M1.S.6` wich requires "Minimum corner-to-corner spacing between two M1 polygons"
+and as seen in the `gui` and reported error in `lyrdb` file it matches the `pdk drc` document
