@@ -211,4 +211,25 @@ An example of the reported area is
 Design area 2489 u^2 45% utilization.
 ```
 
-## Optimizing the design for 0 wns and drc free
+## Understanding DRC Using Klayout
+
+
+The DRC file structure is as follows 
+
+![directory](resources/img3.jpg)
+
+The drc files are from (https://github.com/laurentc2/ASAP7_for_KLayout)[https://github.com/laurentc2/ASAP7_for_KLayout]
+
+The drc rules for asap7 can be found at (https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf)[https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf]
+
+On running the drc for `asap7/gds` ,`6_drc_count.rpt` gives the count of 348 violations and their respective descriptions are in `6_drc.lyrdb`
+
+One such example for the DRC error reported is listed below ( I might be wrong in understanding the error)
+
+![test](resources/test1.png)
+![test](resources/test2.png)
+![test](resources/test3.png)
+
+the rule `V4.M5.AUX.2` requires "V4 must exactly be the same width as M5 along the direction perpendicular to theM5 length"
+
+and as seen in the `gui` and reported `lyrdb` file it matches the `pdk drc` document
