@@ -80,6 +80,7 @@ cd OpenROAD-flow-scripts
 git checkout master
 git pull
 git submodule update
+./build_openroad.sh --local --clean
 ```
 
 
