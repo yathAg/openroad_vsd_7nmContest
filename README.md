@@ -218,11 +218,14 @@ The DRC file structure is as follows
 
 ![directory](resources/img3.jpg)
 
-The drc files are from (https://github.com/laurentc2/ASAP7_for_KLayout)[https://github.com/laurentc2/ASAP7_for_KLayout]
+- The drc files are from [https://github.com/laurentc2/ASAP7_for_KLayout](https://github.com/laurentc2/ASAP7_for_KLayout)
 
-The drc rules for asap7 can be found at (https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf)[https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf]
+- The drc rules for asap7 can be found at [https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf]
+(https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf)
 
 On running the drc for `asap7/gds` ,`6_drc_count.rpt` gives the count of 348 violations and their respective descriptions are in `6_drc.lyrdb`
+
+
 
 One such example for the DRC error reported is listed below ( I might be wrong in understanding the error)
 
