@@ -119,6 +119,7 @@ cp results/asap7/ibex/base/6_1_merged.gds results/asap7/ibex/base/6_final.gds
 
  ```
 
+> The build time is highly dependent on the system hardware. The desktop for the above tests contains 8 cores and 16 Gb of ram 
 
  OpenROAD offers an interactive to analyse the generated GDSII and the gui is launched using
 
@@ -212,4 +213,7 @@ An example of the reported area is
 Design area 2489 u^2 45% utilization.
 ```
 
-## Optimizing the design for 0 wns and drc free
+## Performing DRC on the final GDSII.
+
+> Everything discussed in this section is experimental and NOT from ORFS. 
+
