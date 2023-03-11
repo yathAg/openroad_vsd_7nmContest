@@ -242,3 +242,13 @@ This results in a GUI tool listing out all the drc violations with their count, 
 These errors currently are due to the incomplete definitions in the tech LEF file and a detailed discussion on this topic can be found [here](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/discussions/854)
 
 ### Understanding LEF files 
+
+Reference material 
+
+- [https://www.ispd.cc/contests/18/lefdefref.pdf](https://www.ispd.cc/contests/18/lefdefref.pdf)
+- [http://coriolis.lip6.fr/doc/lefdef/lefdefref/LEFSyntax.html](http://coriolis.lip6.fr/doc/lefdef/lefdefref/LEFSyntax.html)
+- [https://redirect.cs.umbc.edu/~cpatel2/links/641/slides/lect04_LEF.pdf](https://redirect.cs.umbc.edu/~cpatel2/links/641/slides/lect04_LEF.pdf)
+
+
+
+
