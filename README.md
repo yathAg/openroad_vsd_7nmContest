@@ -213,14 +213,9 @@ An example of the reported area is
 Design area 2489 u^2 45% utilization.
 ```
 
-<<<<<<< HEAD
 ## Performing DRC on the final GDSII.
 
 > Everything discussed in this section is experimental and NOT from ORFS. 
-=======
-## Understanding DRC Using Klayout
-
->>>>>>> test
 
 The DRC file structure is as follows 
 
@@ -232,13 +227,9 @@ The DRC file structure is as follows
 
 On running the drc for `asap7/gds` ,`6_drc_count.rpt` gives the count of 348 violations and their respective descriptions are in `6_drc.lyrdb`
 
-<<<<<<< HEAD
-=======
-
->>>>>>> test
 These violations can be seen in detail by running the  `.lydrc` script in Klayout by
 - Launch klayout
-- open the `6_1_merged.gds` file produced from 
+- open the `6_final.gds` file produced from 
 `make DESIGN_CONFIG=./designs/asap7/gcd/config.mk`
 - under the ` tools -> DRC -> new DRC` script import the `asap7.lydrc` file and run the drc check.
 
@@ -246,9 +237,4 @@ This results in a GUI tool listing out all the drc violations with their count, 
 
 ![directory](resources/test4.png)
 
-<<<<<<< HEAD
 These errors currently are due to the incomplete definitions in the tech LEF file and a detailed discussion on this topic can be found [here](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/discussions/854).
-=======
-one example of the violations reported is `M1.S.6` wich requires "Minimum corner-to-corner spacing between two M1 polygons"
-and as seen in the `gui` and reported error in `lyrdb` file it matches the `pdk drc` document
->>>>>>> test
