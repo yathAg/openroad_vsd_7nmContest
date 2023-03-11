@@ -213,9 +213,11 @@ An example of the reported area is
 Design area 2489 u^2 45% utilization.
 ```
 
-## Performing DRC on the final GDSII.
+### Performing DRC on the final GDSII using KLayout
 
 > Everything discussed in this section is experimental and NOT from ORFS. 
+
+> These tests were carried out on asap7/gcd design as the DRC check takes a huge time to run on the asap7/ ibex design
 
 The DRC file structure is as follows 
 
@@ -237,4 +239,6 @@ This results in a GUI tool listing out all the drc violations with their count, 
 
 ![directory](resources/test4.png)
 
-These errors currently are due to the incomplete definitions in the tech LEF file and a detailed discussion on this topic can be found [here](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/discussions/854).
+These errors currently are due to the incomplete definitions in the tech LEF file and a detailed discussion on this topic can be found [here](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/discussions/854)
+
+### Understanding LEF files 
