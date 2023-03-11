@@ -217,3 +217,24 @@ Design area 2489 u^2 45% utilization.
 
 > Everything discussed in this section is experimental and NOT from ORFS. 
 
+The DRC file structure is as follows 
+
+![directory](resources/img3.jpg)
+
+- The drc files are from [https://github.com/laurentc2/ASAP7_for_KLayout](https://github.com/laurentc2/ASAP7_for_KLayout)
+
+- The drc rules for asap7 can be found at [https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf](https://github.com/The-OpenROAD-Project/asap7/blob/master/asap7PDK_r1p7/docs/asap7_drm_201207a.pdf)
+
+On running the drc for `asap7/gds` ,`6_drc_count.rpt` gives the count of 348 violations and their respective descriptions are in `6_drc.lyrdb`
+
+These violations can be seen in detail by running the  `.lydrc` script in Klayout by
+- Launch klayout
+- open the `6_1_merged.gds` file produced from 
+`make DESIGN_CONFIG=./designs/asap7/gcd/config.mk`
+- under the ` tools -> DRC -> new DRC` script import the `asap7.lydrc` file and run the drc check.
+
+This results in a GUI tool listing out all the drc violations with their count, description and location.
+
+![directory](resources/test4.png)
+
+These errors currently are due to the incomplete definitions in the tech LEF file and a detailed discussion on this topic can be found [here](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/discussions/854).
