@@ -215,4 +215,34 @@ Design area 2489 u^2 45% utilization.
 
 
 
+## Auto tuner installation
 
+- install python 3.9
+
+```
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt update
+$ sudo apt install python3.9
+```
+
+- install pip3.9  ( [tutorial](https://stackoverflow.com/questions/65644782/how-to-install-pip-for-python-3-9-on-ubuntu-20-04))
+
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3.9 get-pip.py
+``` 
+- install autotuner (Warning this is going to take sometime)
+
+```
+$ pip3.9 install -U --user 'ray[default,tune]==1.11.0' ax-platform hyperopt nevergrad optuna pandas
+$ pip3.9 install -U --user colorama==0.4.4 bayesian-optimization==1.4.0
+```
+
+### running autotuner
+
+- Change directory to flow/util
+
+- run the following command for the `sky130hd/gcd` design
+```
+$ python3.9 distributed.py --design gcd --platform sky130hd --config ../designs/sky130hd/gcd/autotuner.json tune
+```
