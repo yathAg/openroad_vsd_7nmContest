@@ -217,7 +217,7 @@ Design area 2489 u^2 45% utilization.
 
 ## Auto tuner installation
 
->**Note** Please copy the commands exactly as the tool does not work if `python3.9` is not used
+>**Warning** Please copy the commands exactly as the tool does not work if `python3.9` is not used
 
 1) Install `python 3.9`
 
@@ -240,7 +240,7 @@ $ pip3.9 install -U --user 'ray[default,tune]==1.11.0' ax-platform hyperopt neve
 $ pip3.9 install -U --user colorama==0.4.4 bayesian-optimization==1.4.0
 ```
 
-### Running autotuner
+## Running autotuner
 
 - Change directory to flow/util
 
