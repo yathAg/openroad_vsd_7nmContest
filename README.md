@@ -217,7 +217,7 @@ Design area 2489 u^2 45% utilization.
 
 ## Auto tuner installation
 
-> **Note!** Please copy the commands exactly as the tool does not work if `python3.9` is not used
+>**Note** Please copy the commands exactly as the tool does not work if `python3.9` is not used
 
 1) Install `python 3.9`
 
