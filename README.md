@@ -31,6 +31,7 @@ Link to pull request [900](https://github.com/The-OpenROAD-Project/OpenROAD-flow
 When export `SYNTH_HIERARCHICAL = `1 is defined in the `config.mk` for the hierarchical synthesis, the format of the generated synth_stat is different.
 
 [synth_stat_flat.txt](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/files/11017803/synth_stat_flat.txt)
+
 [synth_stat_hier.txt](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/files/11017804/synth_stat_hier.txt)
 
 This leads to the `genMetrics.py` copying the wrong core area, which is arbitrarily small.
