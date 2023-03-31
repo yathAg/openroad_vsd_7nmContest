@@ -41,7 +41,7 @@ Further, when `genRuleFile.py` is executed using `make update_ok`, the `synth__d
 ### Changes 
 The updated `genMetrics.py` file accounts for flat synthesis and hierarchical synthesis, reporting the correct area data.
 
-![image](resources/genUtil.png)
+![image](resources/img3.png)
 
 
 The metadata and rule files for `asap7/riscv32i` are also updated with drc clean and 0wns design metrics to account for the wrong values of `synth__design__instance__area__stdcell`
