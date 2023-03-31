@@ -41,7 +41,7 @@ Further, when `genRuleFile.py` is executed using `make update_ok`, the `synth__d
 ### Changes 
 The updated `genMetrics.py` file accounts for flat synthesis and hierarchical synthesis, reporting the correct area data.
 
-![](resources/genUtil.png)
+![image](resources/genUtil.png)
 
 The metadata and rule files for `asap7/riscv32i` are also updated with drc clean and 0wns design metrics to account for the wrong values of `synth__design__instance__area__stdcell`
 
@@ -59,7 +59,7 @@ nangate45/swerv_wrapper
 
 ## Tool Improvements (2) - Asap7 drc lvs (Open #883)
 
-Link to pull request [883](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/pull/883
+Link to pull request [883](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/pull/883)
 
 Implements DRC check for final GDSII in ASAP7. The check accurately compares the rules defined in the ASAP7 pdk design reference manual with the final GDSII using KLayout and stores the result in `6_drc_count.rpt`
 
