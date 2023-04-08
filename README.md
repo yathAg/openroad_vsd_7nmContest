@@ -318,6 +318,6 @@ Reference material
 
 ## Conclusion
 
-This hackathon was a great exposure to ORFS and understanding the flow along with the file directories. I definitely look forward to using this tool more and also contributing to the project to make Chip design more accessible and availible for all. 
+This hackathon was a great exposure to ORFS and understanding the flow along with the file directories. I definitely look forward to using this tool more and also contributing to the project to make Chip design more accessible and available for all. 
 
 I would like to thank  Vijayan Krishnan, Matt Liberty and the teams from VSD and OpenRoad to provide this amazing opportunity and being patient with my countless doubts. 
